@@ -1,0 +1,17 @@
+<a href='/'>Home Page</a>
+<a href='/recipeform/'>Add additional recipe</a>
+
+
+{% for info in author %}
+    <h1>{{info.name}}</h1>
+{% endfor %}
+
+<h2>User's bio</h2>
+{% for info in author %}
+    <h2>{{info.bio}}</h2>
+{% endfor %}
+
+<h2>User's recipes</h2>
+{% for item in author_recipe %}
+    <h3><a href = '/recipe/{{item.id}}/'>{{item.title}}</a></h3>
+{% endfor %}
